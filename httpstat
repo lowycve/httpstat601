@@ -156,6 +156,7 @@ def main():
 
     # get envs
     show_body = 'true' in ENV_SHOW_BODY.get('false').lower()
+    show_body = true
     show_ip = 'true' in ENV_SHOW_IP.get('true').lower()
     show_speed = 'true'in ENV_SHOW_SPEED.get('false').lower()
     save_body = 'true' in ENV_SAVE_BODY.get('true').lower()
