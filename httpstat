@@ -156,7 +156,6 @@ def main():
 
     # get envs
     show_body = 'true' in ENV_SHOW_BODY.get('false').lower()
-    show_body = true
     show_ip = 'true' in ENV_SHOW_IP.get('true').lower()
     show_speed = 'true'in ENV_SHOW_SPEED.get('false').lower()
     save_body = 'true' in ENV_SAVE_BODY.get('true').lower()
@@ -261,7 +260,7 @@ def main():
     if show_ip:
         s = 'Connected to {}:{} from {}:{}'.format(
             cyan(d['remote_ip']), cyan(d['remote_port']),
-            d['local_ip'], d['local_port'],
+            green(d['local_ip']), green(d['local_port']),
         )
         print(s)
         print()
