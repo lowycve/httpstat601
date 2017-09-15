@@ -272,13 +272,22 @@ def main():
     lg.debug('rm header file %s', headerf.name)
     os.remove(headerf.name)
 
+    error = False
+
     for loop, line in enumerate(headers.split('\n')):
         if loop == 0:
             p1, p2 = tuple(line.split('/'))
-            print(green(p1) + grayscale[14]('/') + cyan(p2))
+            if p2.find('200') is -1:
+                error = True
+                print(green(p1) + grayscale[14]('/') + red(p2))
+            else:
+                print(green(p1) + grayscale[14]('/') + cyan(p2))
         else:
             pos = line.find(':')
-            print(grayscale[14](line[:pos + 1]) + cyan(line[pos + 1:]))
+            if loop == 3 and error:
+                print(grayscale[14](line[:pos + 1]) + red(line[pos + 1:]))
+            else:
+                print(grayscale[14](line[:pos + 1]) + cyan(line[pos + 1:]))
 
     print()
 
