@@ -1,5 +1,5 @@
 # httpstat
-
+This is homework1 of EC601
 ![screenshot](screenshot.png)
 
 httpstat visualizes `curl(1)` statistics in a way of beauty and clarity.
