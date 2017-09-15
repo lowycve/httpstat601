@@ -1,5 +1,6 @@
 # httpstat
 This is homework1 of EC601
+This homework will due one Sunday, Sep 17, 2017
 ![screenshot](screenshot.png)
 
 httpstat visualizes `curl(1)` statistics in a way of beauty and clarity.
