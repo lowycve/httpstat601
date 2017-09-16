@@ -96,7 +96,7 @@ def make_color(code):
         return tpl.format(code, s)
     return color_func
 
-
+#get color
 red = make_color(31)
 green = make_color(32)
 yellow = make_color(33)
