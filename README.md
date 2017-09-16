@@ -1,3 +1,10 @@
+# httpstat601
+
+#This is Assignment 1 in EC 601, due on Sunday the 17th of September.
+
+
+
+
 
 # httpstat
 
@@ -151,5 +158,6 @@ Some code blocks in `httpstat` are copied from other projects of mine, have a lo
 
 - [reorx/getenv](https://github.com/reorx/getenv) Environment variable definition with type.
 
-# httpstat601
-#This is Assignment 1 in EC 601, due on Sunday the 17th of September.
+
+
+
