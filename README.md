@@ -14,11 +14,11 @@ It is a **single file🌟** Python script that has **no dependency👏** and is 
 
 There are three ways to get `httpstat`:
 
-- Download the script directly: `wget https://raw.githubusercontent.com/reorx/httpstat/master/httpstat.py`
+method 1: Download the script directly: `wget https://raw.githubusercontent.com/reorx/httpstat/master/httpstat.py`
 
-- Through pip: `pip install httpstat`
+method 2: Through pip: `pip install httpstat`
 
-- Through homebrew (macOS only): `brew install httpstat`
+method 3: Through homebrew (macOS only): `brew install httpstat`
 
 > For Windows users, @davecheney's [Go version](https://github.com/davecheney/httpstat) is suggested. → [download link](https://github.com/davecheney/httpstat/releases)
 
