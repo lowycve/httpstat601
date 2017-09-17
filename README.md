@@ -1,3 +1,4 @@
+<<<<<<< Yuchen
 # httpstat
 This is homework1 of EC601
 
@@ -152,3 +153,7 @@ Some code blocks in `httpstat` are copied from other projects of mine, have a lo
 - [reorx/python-terminal-color](https://github.com/reorx/python-terminal-color) Drop-in single file library for printing terminal color.
 
 - [reorx/getenv](https://github.com/reorx/getenv) Environment variable definition with type.
+=======
+# httpstat601
+#This is Assignment 1 in EC 601, due on Sunday the 17th of September.
+>>>>>>> master
