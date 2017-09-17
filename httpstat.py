@@ -96,13 +96,21 @@ def make_color(code):
         return tpl.format(code, s)
     return color_func
 
+
+
+=======
 #get color
+
 red = make_color(31)
 green = make_color(32)
 yellow = make_color(33)
 blue = make_color(34)
 magenta = make_color(35)
-cyan = make_color(40)
+
+cyan = make_color(49)
+=======
+cyan = make_color(49)
+
 
 bold = make_color(1)
 underline = make_color(4)
@@ -343,8 +351,12 @@ def main():
 
     # speed, originally bytes per second
     if show_speed:
-        print('speed_of_download: {:.1f} KiB/s, speed_upload: {:.1f} KiB/s'.format(
-            d['speed_download'] / 1024, d['speed_upload'] / 1024))
+
+        print('speed_download: {:.1f} B/s, speed_upload: {:.1f} B/s'.format(
+=======
+        print('speed_of_download: {:.1f} B/s, speed_upload: {:.1f} B/s'.format(
+
+            d['speed_download'] , d['speed_upload'] ))
 
 
 if __name__ == '__main__':
