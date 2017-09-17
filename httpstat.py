@@ -343,7 +343,7 @@ def main():
 
     # speed, originally bytes per second
     if show_speed:
-        print('speed_download: {:.1f} KiB/s, speed_upload: {:.1f} KiB/s'.format(
+        print('speed_of_download: {:.1f} KiB/s, speed_upload: {:.1f} KiB/s'.format(
             d['speed_download'] / 1024, d['speed_upload'] / 1024))
 
 
