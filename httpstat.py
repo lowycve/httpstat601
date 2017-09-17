@@ -98,17 +98,17 @@ def make_color(code):
 
 
 
-=======
+
 #get color
 
-red = make_color(31)
-green = make_color(32)
-yellow = make_color(33)
-blue = make_color(34)
-magenta = make_color(35)
+red = make_color(43)
+green = make_color(65)
+yellow = make_color(3)
+blue = make_color(66)
+magenta = make_color(23)
 
 cyan = make_color(49)
-=======
+
 cyan = make_color(49)
 
 
@@ -353,7 +353,7 @@ def main():
     if show_speed:
 
         print('speed_download: {:.1f} B/s, speed_upload: {:.1f} B/s'.format(
-=======
+
         print('speed_of_download: {:.1f} B/s, speed_upload: {:.1f} B/s'.format(
 
             d['speed_download'] , d['speed_upload'] ))
