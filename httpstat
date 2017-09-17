@@ -97,20 +97,12 @@ def make_color(code):
     return color_func
 
 
-
-=======
-#get color
-
 red = make_color(31)
 green = make_color(32)
 yellow = make_color(33)
 blue = make_color(34)
 magenta = make_color(35)
-
-cyan = make_color(49)
-=======
-cyan = make_color(49)
-
+cyan = make_color(36)
 
 bold = make_color(1)
 underline = make_color(4)
@@ -140,7 +132,7 @@ Options:
   --version     show version.
 
 Environments:
-  HTTPSTAT_SHOW_BODY    Set to `true` to show response body in the output,
+  HTTPSTAT_SHOW_BODY    Set to `true` to show resposne body in the output,
                         note that body length is limited to 1023 bytes, will be
                         truncated if exceeds. Default is `false`.
   HTTPSTAT_SHOW_IP      By default httpstat shows remote and local IP/port address.
@@ -268,7 +260,7 @@ def main():
     if show_ip:
         s = 'Connected to {}:{} from {}:{}'.format(
             cyan(d['remote_ip']), cyan(d['remote_port']),
-            d['local_ip'], d['local_port'],
+            green(d['local_ip']), green(d['local_port']),
         )
         print(s)
         print()
@@ -280,13 +272,22 @@ def main():
     lg.debug('rm header file %s', headerf.name)
     os.remove(headerf.name)
 
+    error = False
+
     for loop, line in enumerate(headers.split('\n')):
         if loop == 0:
             p1, p2 = tuple(line.split('/'))
-            print(green(p1) + grayscale[14]('/') + cyan(p2))
+            if p2.find('200') is -1:
+                error = True
+                print(green(p1) + grayscale[14]('/') + red(p2))
+            else:
+                print(green(p1) + grayscale[14]('/') + cyan(p2))
         else:
             pos = line.find(':')
-            print(grayscale[14](line[:pos + 1]) + cyan(line[pos + 1:]))
+            if loop == 3 and error:
+                print(grayscale[14](line[:pos + 1]) + red(line[pos + 1:]))
+            else:
+                print(grayscale[14](line[:pos + 1]) + cyan(line[pos + 1:]))
 
     print()
 
@@ -351,12 +352,8 @@ def main():
 
     # speed, originally bytes per second
     if show_speed:
-
-        print('speed_download: {:.1f} B/s, speed_upload: {:.1f} B/s'.format(
-=======
-        print('speed_of_download: {:.1f} B/s, speed_upload: {:.1f} B/s'.format(
-
-            d['speed_download'] , d['speed_upload'] ))
+        print('speed_download: {:.1f} KiB/s, speed_upload: {:.1f} KiB/s'.format(
+            d['speed_download'] / 1024, d['speed_upload'] / 1024))
 
 
 if __name__ == '__main__':
